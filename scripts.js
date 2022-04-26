@@ -26,22 +26,16 @@ function playRound(playerSelection, computerSelection) {
    computerSelection = computerPlay().toLowerCase();
 
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
-    //    playerScore++;
         return "You Win! Rock beats Scissors";
     } else if (playerSelection == 'rock' && computerSelection == 'paper') {
-    //    compScore++;
         return "You Lose! Paper beats Rock";
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-     //   playerScore++;
         return "You Win! Paper beats Rock";
     } else if (playerSelection == 'paper' && computerSelection == 'scissors') {
-    //    compScore++;
         return "You Lose! Scissors beats Paper";
     } else if (playerSelection == 'scissors' && computerSelection == 'rock') {
-     //   compScore++;
         return "You Lose! Rock beats Scissors";
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-   //     playerScore++;
         return "You Win! Scissors beats Paper";
     }  else {
           return "Draw"
@@ -55,7 +49,6 @@ function game() {
     for (let i = 0; i < 5; i++) {
         let result = playRound();
         console.log(result);
- //       console.log(result.charAt(4));
 
 
         if (result.charAt(4) == 'W') {
@@ -63,8 +56,6 @@ function game() {
         } else if (result.charAt(4) == 'L') {
             compScore++;
         }
-
- //       console.log(playerScore);
 
         
         if (i == 4 && playerScore > compScore) {
@@ -74,13 +65,6 @@ function game() {
         } else if (i == 4 && playerScore == compScore) {
             return 'Game ended ' +playerScore+ ' - ' +compScore+ ", It's a draw! Refresh page to play again"
         }
-      //  return 'Game ended ' +a+ ' - ' +b+ '!';
-    /*     
-        if (a > b) {
-            return 'You won! Game ended ' +a+ ' - ' +b+'!';
-        }
-        */
  
     }
-}  /*     if (playRound().charAt(4) = "L") {
-} */
+} 
