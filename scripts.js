@@ -2,18 +2,21 @@
 // TODO: PLAY AGAIN BUTTON?
 // sum css?
 
+// grab your score container
 const humanScore = document.querySelector('.humanScore')
 
+// grab computer score container
 const pcScore = document.querySelector('.pcScore')
 
+// grab resultbox 
 const gameResult = document.querySelector('.gameResult')
 
-
+// set global variables
 let playerScore = 0;
 let compScore = 0;
 
 
-console.log("*Welcome to the Rock Paper Scissors game, type 'game()' to get started*")
+console.log("*Welcome to the Rock Paper Scissors game")
 
 // Function to return 'Rock', 'Paper' or 'Scissors' for the opponent
 function computerPlay() {
@@ -44,36 +47,31 @@ function playRound(playerSelection, computerSelection) {
         if (playerSelection === 'rock' && computerSelection === 'scissors') {
             gameResult.textContent = 'You win! Rock beats Scissors';
             humanScore.textContent = (playerScore += 1);
+
         } else if (playerSelection === 'rock' && computerSelection === 'paper') {
-        // return "You Lose! Paper beats Rock";
         gameResult.textContent = 'You Lose! Paper beats Rock';
         pcScore.textContent = (compScore += 1);
         } else if (playerSelection === 'paper' && computerSelection === 'rock') {
-        // return "You Win! Paper beats Rock";
         gameResult.textContent = 'You win! Paper beats Rock';
         humanScore.textContent = (playerScore += 1);
         } else if (playerSelection === 'paper' && computerSelection === 'scissors') {
-        // return "You Lose! Scissors beats Paper";
         gameResult.textContent = 'You Lose! Scissors beats Paper';
         pcScore.textContent = (compScore += 1);
         } else if (playerSelection === 'scissors' && computerSelection === 'rock') {
-        // return "You Lose! Rock beats Scissors";
         gameResult.textContent = 'You Lose! Rock beats Scissors';
         pcScore.textContent = (compScore += 1);
         } else if (playerSelection === 'scissors' && computerSelection === 'paper') {
-        //  return "You Win! Scissors beats Paper";
         gameResult.textContent = 'You win! Scissors beats Paper';
         humanScore.textContent = (playerScore += 1);
         }  else {
-            //  return "Draw"
             gameResult.textContent = drawGame;
         }
     }
     if (playerScore === 5) {
-        gameResult.textContent = 'Congratulations! You won the game!'
+        gameResult.textContent = 'Congratulations! You won the game! Reload the page to do it again (until we get a button to click :))'
     }
     if (compScore === 5) {
-        gameResult.textContent = 'Aww, you lost this time, try again!'
+        gameResult.textContent = 'Aww, you lost this time. Reload the page to try again (until we get a button :))'
     }
 
 }
