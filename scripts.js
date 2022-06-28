@@ -1,9 +1,5 @@
-
-// TODO: PLAY AGAIN BUTTON?
-// sum css?
-
 // grab your score container
-const humanScore = document.querySelector('.humanScore')
+const humanScore = document.querySelector('.yourScore')
 
 // grab computer score container
 const pcScore = document.querySelector('.pcScore')
